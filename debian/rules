@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autoreconf --parallel
+
+override_dh_autoreconf:
+	./bootstrap
+
+override_dh_auto_build:
+	dh_auto_build -- -C Kernel/Classes
+	dh_auto_build -- -C Kernel/Formats/fits
+	dh_auto_build
+

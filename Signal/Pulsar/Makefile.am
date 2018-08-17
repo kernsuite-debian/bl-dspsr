@@ -43,9 +43,13 @@ LDADD = libdspsr.la \
 	$(top_builddir)/Signal/General/libdspdsp.la \
 	$(top_builddir)/Kernel/libdspbase.la \
 	$(top_builddir)/Signal/Statistics/libdspstats.la \
-	$(top_builddir)/Kernel/Formats/fits/libfits.la \
-	$(top_builddir)/Kernel/Classes/libClasses.la \
-	@CUFFT_LIBS@ @CUDA_LIBS@
+	@CUDA_LIBS@ 
+
+if HAVE_CUFFT_CALLBACKS
+LDADD += $(top_builddir)/Signal/General/ConvolutionCUDACallbacks_DC.o -lcufft_static -lculibos
+else
+LDADD += @CUFFT_LIBS@
+endif
 
 AM_CPPFLAGS += @CUFFT_CFLAGS@
 if HAVE_CFITSIO

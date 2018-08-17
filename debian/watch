@@ -1,0 +1,5 @@
+version=4
+opts="mode=git, pgpmode=none, pretty=0.0~git%cd.%h" \
+https://github.com/UCBerkeleySETI/dspsr \
+heads/directio-branch debian uupdate
+

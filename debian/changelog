@@ -1,3 +1,13 @@
+bl-dspsr (0.0~git20180312.50ea209-1) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * add watch file
+  * New upstream version 0.0~git20180312.50ea209
+  * remove old patch
+  * disable tests since broken
+
+ -- KERN packaging <packaging@kernsuite.info>  Mon, 20 Aug 2018 15:41:36 +0200
+
 bl-dspsr (0+git20160405-1) bionic; urgency=medium
 
   * Initial release

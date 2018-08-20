@@ -140,3 +140,6 @@ Signal/Pulsar/Makefile.in
 Signal/Statistics/Makefile.in
 config/Makefile.in
 python/Makefile.in
+config/fontutil.m4
+config/mysql.m4
+

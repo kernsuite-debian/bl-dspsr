@@ -8,7 +8,8 @@ Build-Depends:
  psrchive-dev,
  liblapack-dev,
  libfftw3-dev,
- libcfitsio-dev,
+ libcfitsio3-dev|libcfitsio-dev,
+ libgsl-dev,
  dh-autoreconf,
  gfortran
 Standards-Version: 3.9.6
